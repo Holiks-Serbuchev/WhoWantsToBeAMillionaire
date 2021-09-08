@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+@model Game
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+<body>
+    <header>
+        <p style="text-align:right;">Score: @Model.score</p>
+        <p align="center">@Model.question</p>
+    </header>
+    <main>
+        <form asp-action="Index" method="post">
+            <p align="center" style="margin-top:125px;">
+                <button type="submit" value="FirstAnswer" name="nameStandart" style="margin-right: 150px; visibility: hidden;" id="FirstAnswer">@ViewData["FirstAnswer"]</button>
+                <button type="submit" value="SecondAnswer" name="nameStandart" style="visibility: hidden;" id="SecondAnswer">@ViewData["SecondAnswer"]</button>
+            </p><br /><br /><br /><br />
+            <p align="center">
+                <button type="submit" value="ThirdAnswer" name="nameStandart" style="margin-right: 150px;visibility:hidden;" id="ThirdAnswer">@ViewData["ThirdAnswer"]</button>
+                <button type="submit" value="FourthAnswer" name="nameStandart" style="visibility: hidden;" id="FourthAnswer">@ViewData["FourthAnswer"]</button>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <div style="display: flex; justify-content: center; ">
+            <form asp-action="Index" method="post">
+                <select asp-for="maxSteps" id="Selector">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                </select>
+                <input type="submit" value="Начать" id="@Model.start.ToString()" name="start" onclick="Start(this.id)" />
+            </form>
+            <button value="@Model.correctAnswer" id="FiftyButton" name="fiftyButton" onclick="Clicked()" style="visibility: collapse; margin-left: 4px; height: 60px;">50 / 50</button>
+        </div>
+    </footer>
+</body>
+</html>
+<script type="text/javascript" src="\js\site.js" charset="utf-8"></script>
