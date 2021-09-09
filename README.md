@@ -21,7 +21,9 @@ When the user presses the "Старт" button, the game will start and new funct
     * A new 50/50 function will appear on the page. It allows you to hide two incorrect answers;
     * There will also be a new function to stop the game. It fires when the user clicks on the "Стоп" button;
     * There are also buttons thanks to which you can choose an answer.When you click on it, if this is the correct answer, then points are added to the Score, if it is not correct, the game is reset, where you will then be offered to start the game again.
-   ![alt text](https://media.discordapp.net/attachments/592433653683060761/885491655363407912/unknown.png?width=1320&height=676)
+
+
+ ![alt text](https://media.discordapp.net/attachments/592433653683060761/885491655363407912/unknown.png?width=1320&height=676)
 
 Example of using the game "Who Wants to Become a Millionaire":
  ![hippo](https://media.discordapp.net/attachments/592433653683060761/885510011755847700/d55d5f3e3df1db68.gif?width=920&height=458)
