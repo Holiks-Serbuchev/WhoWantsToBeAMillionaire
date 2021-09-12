@@ -35,8 +35,6 @@ namespace WhoWantsToBeAMillionaire.Controllers
                     catch (Exception) { game.score = 0; ChangeValues(); game.maxSteps = maxSteps - 1; }
                 }
             }
-            //else if (start == "Стоп")
-            //    game.score = 0;
             return View(game);
         }
         void ChangeValues()
